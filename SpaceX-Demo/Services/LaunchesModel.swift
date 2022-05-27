@@ -7,19 +7,16 @@
 
 import Foundation
 
-struct LaunchesData: Codable {
-    let launches: [Launches]
-}
 
-struct Launches: Codable {
+struct Launches: Hashable, Codable {
     let id: String
     let name: String
     let links: Links
-    let staticFireDateUTC: String
+    let staticFireDateUTC: String?
     let rocket: String
     let crew: [String]
     let success: Bool
-    let details: String
+    let details: String?
     let launchpad: String
     let flightNumber: Int
     
@@ -32,7 +29,7 @@ struct Launches: Codable {
     }
 }
 
-struct Links: Codable {
+struct Links:Hashable, Codable {
     let patch: Patch
     let flickr: Flickr
     
@@ -41,10 +38,10 @@ struct Links: Codable {
     }
 }
 
-struct Flickr: Codable {
+struct Flickr:Hashable, Codable {
     let original: [String]
 }
 
-struct Patch: Codable {
+struct Patch:Hashable, Codable {
     let small, large: String
 }
