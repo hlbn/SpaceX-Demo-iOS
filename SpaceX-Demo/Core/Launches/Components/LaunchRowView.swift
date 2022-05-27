@@ -21,6 +21,8 @@ struct LaunchRowView: View {
                         Text("Putnik")
                             .font(.headline)
                             .padding()
+                    
+                        Text("Pod: ")
                         
                         Text("2020-05-22T17:39:00.000Z")
                         .font(.subheadline)
