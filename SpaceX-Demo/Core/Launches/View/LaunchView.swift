@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct LaunchView: View {
+    @StateObject var launches = LaunchesApi()
     var body: some View {
-        TabView{
-            LaunchRowView()
+       NavigationView{
+            List{
+                ForEach(launches.launches,id: \.self) { launches in
+                    HStack {
+                        Image("")
+                            .frame(width: 120, height: 120)
+                            .background(Color.gray)
+                        Text(launches.name)
+                            .bold()
+                    }
+                }
+            }
+            .navigationTitle("Launches")
+            .onAppear{
+                launches.fetch()
+            }
         }
+       .navigationViewStyle(.stack)
     }
 }
 

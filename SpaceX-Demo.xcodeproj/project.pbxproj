@@ -14,6 +14,7 @@
 		E4D476E828411CF100F2229D /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D476E728411CF100F2229D /* LaunchView.swift */; };
 		E4D476EA28411D5900F2229D /* LaunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D476E928411D5900F2229D /* LaunchRowView.swift */; };
 		E4D476EC28412AB900F2229D /* LaunchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D476EB28412AB900F2229D /* LaunchesModel.swift */; };
+		E4D4770A2841781E00F2229D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D477092841781E00F2229D /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E4D476E728411CF100F2229D /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		E4D476E928411D5900F2229D /* LaunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRowView.swift; sourceTree = "<group>"; };
 		E4D476EB28412AB900F2229D /* LaunchesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesModel.swift; sourceTree = "<group>"; };
+		E4D477092841781E00F2229D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				E4D476EB28412AB900F2229D /* LaunchesModel.swift */,
+				E4D477092841781E00F2229D /* Service.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				E4D476D4283FBC7000F2229D /* ContentView.swift in Sources */,
 				E4D476E828411CF100F2229D /* LaunchView.swift in Sources */,
 				E4D476D2283FBC7000F2229D /* SpaceX_DemoApp.swift in Sources */,
+				E4D4770A2841781E00F2229D /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
