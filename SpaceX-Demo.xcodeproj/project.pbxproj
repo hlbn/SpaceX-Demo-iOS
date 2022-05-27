@@ -51,6 +51,8 @@
 		E4D476D0283FBC7000F2229D /* SpaceX-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E4D476E02840D17F00F2229D /* Core */,
+				E4D476DF2840D17500F2229D /* Services */,
 				E4D476D1283FBC7000F2229D /* SpaceX_DemoApp.swift */,
 				E4D476D3283FBC7000F2229D /* ContentView.swift */,
 				E4D476D5283FBC7100F2229D /* Assets.xcassets */,
@@ -65,6 +67,68 @@
 				E4D476D8283FBC7100F2229D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E4D476DF2840D17500F2229D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E4D476E02840D17F00F2229D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E4D476E22840D23E00F2229D /* LaunchesDetail */,
+				E4D476E12840D1A700F2229D /* Launches */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E4D476E12840D1A700F2229D /* Launches */ = {
+			isa = PBXGroup;
+			children = (
+				E4D476E52840D2DD00F2229D /* Components */,
+				E4D476E42840D28500F2229D /* View */,
+			);
+			path = Launches;
+			sourceTree = "<group>";
+		};
+		E4D476E22840D23E00F2229D /* LaunchesDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E4D476E62840D2E700F2229D /* Components */,
+				E4D476E32840D27F00F2229D /* View */,
+			);
+			path = LaunchesDetail;
+			sourceTree = "<group>";
+		};
+		E4D476E32840D27F00F2229D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4D476E42840D28500F2229D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4D476E52840D2DD00F2229D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E4D476E62840D2E700F2229D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
