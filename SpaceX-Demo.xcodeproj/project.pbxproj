@@ -13,6 +13,7 @@
 		E4D476D9283FBC7100F2229D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D476D8283FBC7100F2229D /* Preview Assets.xcassets */; };
 		E4D476E828411CF100F2229D /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D476E728411CF100F2229D /* LaunchView.swift */; };
 		E4D476EA28411D5900F2229D /* LaunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D476E928411D5900F2229D /* LaunchRowView.swift */; };
+		E4D476EC28412AB900F2229D /* LaunchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D476EB28412AB900F2229D /* LaunchesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E4D476D8283FBC7100F2229D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4D476E728411CF100F2229D /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		E4D476E928411D5900F2229D /* LaunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRowView.swift; sourceTree = "<group>"; };
+		E4D476EB28412AB900F2229D /* LaunchesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		E4D476DF2840D17500F2229D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E4D476EB28412AB900F2229D /* LaunchesModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D476EC28412AB900F2229D /* LaunchesModel.swift in Sources */,
 				E4D476EA28411D5900F2229D /* LaunchRowView.swift in Sources */,
 				E4D476D4283FBC7000F2229D /* ContentView.swift in Sources */,
 				E4D476E828411CF100F2229D /* LaunchView.swift in Sources */,
