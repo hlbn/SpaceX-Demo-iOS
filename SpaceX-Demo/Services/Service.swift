@@ -8,7 +8,9 @@
 import Foundation
 
 class LaunchesApi: ObservableObject {
-    @Published var launches: [Launches] = []
+    @Published var launchesData: [Launches] = []
+    @Published var flickrData: [Flickr] = []
+    @Published var patchData: [Patch] = []
     
     func fetch() {
         guard let url = URL(string: "https://api.spacexdata.com/v4/launches/past")
@@ -22,10 +24,11 @@ class LaunchesApi: ObservableObject {
                 return
             }
             do{
-                let launches = try JSONDecoder().decode([Launches].self, from: data)
+                let launchesData = try JSONDecoder().decode([Launches].self, from: data)
                 DispatchQueue.main.async {
-                    self?.launches = launches
+                    self?.launchesData = launchesData
                 }
+                print(launchesData)
             } catch {
                 print(error)
             }

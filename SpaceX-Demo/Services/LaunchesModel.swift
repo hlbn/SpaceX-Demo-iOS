@@ -39,9 +39,9 @@ struct Links:Hashable, Codable {
 }
 
 struct Flickr:Hashable, Codable {
-    let original: [String]
+    let original: [String]?
 }
 
 struct Patch:Hashable, Codable {
-    let small, large: String
+    let small, large: String?
 }
