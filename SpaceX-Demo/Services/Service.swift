@@ -18,17 +18,19 @@ class LaunchesApi: ObservableObject {
             return
         }
         
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+
         let taskLaunches = URLSession.shared.dataTask(with: url) { [weak self]
             data, response, error in
             guard let data = data, error == nil else {
                 return
             }
             do{
-                let launchesData = try JSONDecoder().decode([Launches].self, from: data)
+                let launchesData = try decoder.decode([Launches].self, from: data)
                 DispatchQueue.main.async {
                     self?.launchesData = launchesData
                 }
-                print(launchesData)
             } catch {
                 print(error)
             }

@@ -5,14 +5,14 @@
 //  Created by Adam Hlubina on 27/05/2022.
 //
 
-import Foundation
+import UIKit
 
 
 struct Launches: Hashable, Codable {
     let id: String
     let name: String
     let links: Links
-    let staticFireDateUTC: String?
+    let date: Date
     let rocket: String
     let crew: [String]
     let success: Bool
@@ -23,11 +23,12 @@ struct Launches: Hashable, Codable {
     enum CodingKeys: String, CodingKey {
         case id, name
         case links
-        case staticFireDateUTC = "static_fire_date_utc"
+        case date = "date_local"
         case rocket, success, details, launchpad, crew
         case flightNumber = "flight_number"
     }
 }
+
 
 struct Links:Hashable, Codable {
     let patch: Patch
@@ -45,3 +46,5 @@ struct Flickr:Hashable, Codable {
 struct Patch:Hashable, Codable {
     let small, large: String?
 }
+
+
