@@ -9,14 +9,13 @@ import SwiftUI
 
 struct LaunchView: View {
     @StateObject var launches = LaunchesApi()
+    
     var body: some View {
        NavigationView{
             List{
-                ForEach(launches.launches,id: \.self) { launches in
+                ForEach(launches.launchesData,id: \.self) { launches in
                     HStack {
-                        Image("")
-                            .frame(width: 120, height: 120)
-                            .background(Color.gray)
+                        URLImage(urlString: launches.links.patch.large!)
                         Text(launches.name)
                             .bold()
                     }
