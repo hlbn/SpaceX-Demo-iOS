@@ -16,9 +16,12 @@ struct LaunchView: View {
                 ForEach(launches.launchesData,id: \.self) { launches in
                     HStack {
                         URLImage(urlString: launches.links.patch.large!)
+                        Divider()
                         Text(launches.name)
                             .bold()
+                            .padding()
                     }
+                    .padding()
                 }
             }
             .navigationTitle("Launches")

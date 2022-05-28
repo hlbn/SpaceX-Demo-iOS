@@ -20,7 +20,7 @@ struct URLImage: View {
         }else{
             Image(systemName: "x.square")
                 .resizable()
-                .frame(width: 100, height: 100)
+                .frame(width: 120, height: 120)
                 .background(Color.white)
                 .foregroundColor(Color.gray)
                 .onAppear{
