@@ -18,10 +18,11 @@ struct URLImage: View {
                 .resizable()
                 .frame(width: 120, height: 120)
         }else{
-            Image("")
+            Image(systemName: "x.square")
                 .resizable()
-                .frame(width: 120, height: 120)
-                .background(Color.gray)
+                .frame(width: 100, height: 100)
+                .background(Color.white)
+                .foregroundColor(Color.gray)
                 .onAppear{
                     fetchData()
                 }
