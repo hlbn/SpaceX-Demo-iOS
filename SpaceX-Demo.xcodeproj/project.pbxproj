@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E4C1D6802843A909008C7765 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C1D67F2843A909008C7765 /* LaunchViewModel.swift */; };
+		E4C1D6822843AAE3008C7765 /* LaunchesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C1D6812843AAE3008C7765 /* LaunchesDetailView.swift */; };
 		E4D476D2283FBC7000F2229D /* SpaceX_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D476D1283FBC7000F2229D /* SpaceX_DemoApp.swift */; };
 		E4D476D4283FBC7000F2229D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D476D3283FBC7000F2229D /* ContentView.swift */; };
 		E4D476D6283FBC7100F2229D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D476D5283FBC7100F2229D /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		E4C1D67F2843A909008C7765 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		E4C1D6812843AAE3008C7765 /* LaunchesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesDetailView.swift; sourceTree = "<group>"; };
 		E4D476CE283FBC7000F2229D /* SpaceX-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D476D1283FBC7000F2229D /* SpaceX_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_DemoApp.swift; sourceTree = "<group>"; };
 		E4D476D3283FBC7000F2229D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		E4D476E32840D27F00F2229D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4C1D6812843AAE3008C7765 /* LaunchesDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				E4D476EC28412AB900F2229D /* LaunchesModel.swift in Sources */,
 				E4C1D6802843A909008C7765 /* LaunchViewModel.swift in Sources */,
 				E4D476D4283FBC7000F2229D /* ContentView.swift in Sources */,
+				E4C1D6822843AAE3008C7765 /* LaunchesDetailView.swift in Sources */,
 				E4D476E828411CF100F2229D /* LaunchView.swift in Sources */,
 				E4D476D2283FBC7000F2229D /* SpaceX_DemoApp.swift in Sources */,
 				E4D4770A2841781E00F2229D /* Service.swift in Sources */,
