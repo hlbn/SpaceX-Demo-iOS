@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct LaunchesDetailView: View {
-    @StateObject var launches = LaunchesApi()
+    var launches: Launches
     var body: some View {
         ZStack {
             VStack {
-                
+                URLImage(urlString: launches.links.patch.small!)
             }
         }
     }
 }
 
-struct LaunchesDetailView_Previews: PreviewProvider {
+struct LaunchDetailViewModel_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchesDetailView()
+        LaunchView()
     }
 }

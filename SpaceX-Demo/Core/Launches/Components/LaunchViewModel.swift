@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LaunchViewModel: View {
-    @StateObject var launches = LaunchesApi()
+    var launches: Launches
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy, HH:mm"
@@ -16,9 +16,7 @@ struct LaunchViewModel: View {
     }
     
     var body: some View {
-       NavigationView{
-            List{
-                ForEach(launches.launchesData,id: \.self) { launches in
+                     
                     HStack(alignment: .top) {
                         URLImage(urlString: launches.links.patch.large!)
                         Divider()
@@ -49,15 +47,8 @@ struct LaunchViewModel: View {
                     }
                 }
             }
-        }
-            .navigationTitle("Launches")
-            .onAppear{
-                launches.fetch()
-            }
-        }
-       .navigationViewStyle(.stack)
-    }
-}
+                }
+            
 
 struct LaunchViewModel_Previews: PreviewProvider {
     static var previews: some View {

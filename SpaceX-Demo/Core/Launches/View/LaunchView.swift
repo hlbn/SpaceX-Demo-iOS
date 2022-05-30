@@ -4,14 +4,19 @@
 //
 //  Created by Adam Hlubina on 27/05/2022.
 //
-
+import Foundation
 import SwiftUI
-
 struct LaunchView: View {
+    @ObservedObject var launchesApi = LaunchesApi()
     var body: some View {
-       
-        LaunchViewModel()
-        
+        NavigationView{
+            List(launchesApi.launchesData) { launches in
+                NavigationLink(destination: LaunchesDetailView(launches: launches)) {
+                         LaunchViewModel(launches: launches)
+                  
+                }
+            }
+        }
     }
 }
 
