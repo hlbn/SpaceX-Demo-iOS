@@ -16,11 +16,10 @@ struct URLImage: View {
         if let data = data, let uiimage =  UIImage(data: data) {
             Image(uiImage: uiimage)
                 .resizable()
-                .frame(width: 120, height: 120)
+                
         }else{
             Image(systemName: "x.square")
                 .resizable()
-                .frame(width: 120, height: 120)
                 .background(Color.white)
                 .foregroundColor(Color.gray)
                 .onAppear{

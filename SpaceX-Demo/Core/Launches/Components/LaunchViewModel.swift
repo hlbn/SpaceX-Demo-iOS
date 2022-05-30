@@ -19,6 +19,7 @@ struct LaunchViewModel: View {
                      
                     HStack(alignment: .top) {
                         URLImage(urlString: launches.links.patch.large!)
+                            .frame(width: 120, height: 120)
                         Divider()
                         VStack(alignment: .leading){
                         Text(launches.name)
@@ -26,7 +27,7 @@ struct LaunchViewModel: View {
                             .bold()
                             .padding()
                             HStack(alignment: .top){
-                            Text("Success")
+                            Text("Success:")
                                 .font(.subheadline)
                                 .bold()
                             Circle()
