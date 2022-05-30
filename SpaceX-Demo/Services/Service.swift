@@ -4,13 +4,17 @@
 //
 //  Created by Adam Hlubina on 27/05/2022.
 //
-
 import Foundation
+import Combine
+import SwiftUI
 
 class LaunchesApi: ObservableObject {
     @Published var launchesData: [Launches] = []
-    @Published var flickrData: [Flickr] = []
     @Published var patchData: [Patch] = []
+    
+    init(){
+        fetch()
+    }
     
     func fetch() {
         guard let url = URL(string: "https://api.spacexdata.com/v4/launches/past")
