@@ -5,10 +5,10 @@
 //  Created by Adam Hlubina on 27/05/2022.
 //
 
-import UIKit
+import Foundation
 
 
-struct Launches: Hashable, Codable {
+struct Launches: Hashable, Codable, Identifiable {
     let id: String
     let name: String
     let links: Links
@@ -32,16 +32,12 @@ struct Launches: Hashable, Codable {
 
 struct Links:Hashable, Codable {
     let patch: Patch
-    let flickr: Flickr
     
     enum CodingKeys: String, CodingKey {
-        case patch, flickr
+        case patch
     }
 }
 
-struct Flickr:Hashable, Codable {
-    let original: [String]
-}
 
 struct Patch:Hashable, Codable {
     let small, large: String?
