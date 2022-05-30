@@ -16,6 +16,7 @@ struct LaunchView: View {
                   
                 }
             }
+            .navigationTitle("Launches")
         }
     }
 }
