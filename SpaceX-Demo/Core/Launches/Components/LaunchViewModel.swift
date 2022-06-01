@@ -9,23 +9,27 @@ import SwiftUI
 
 struct LaunchViewModel: View {
     var launches: Launches
+    
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy, HH:mm"
+        formatter.dateFormat = "dd.MM.yyyy, \nHH:mm"
         return formatter
     }
     
     var body: some View {
                      
-                    HStack(alignment: .top) {
-                        URLImage(urlString: launches.links.patch.large!)
+                    HStack(alignment: .center) {
+                        URLImage(urlString: launches.links.patch.small!)
                             .frame(width: 120, height: 120)
                         Divider()
+                        
                         VStack(alignment: .leading){
+                            
                         Text(launches.name)
-                                .font(.headline)
+                            .font(.headline)
                             .bold()
-                            .padding()
+                            .padding(EdgeInsets(top: 0, leading: 15, bottom: 5, trailing: 0))
+                            
                             HStack(alignment: .top){
                             Text("Success:")
                                 .font(.subheadline)
@@ -35,14 +39,16 @@ struct LaunchViewModel: View {
                                 .foregroundColor(launches.success == true ? Color.green : Color.red)
                             
                         }
-                            .padding()
+                            .padding(EdgeInsets(top: 0, leading: 15, bottom: 5, trailing: 0))
                             
                             //Text(launches.launchpad)
                             
                             
                             Text(dateFormatter.string(from: launches.date))
+                                .padding(EdgeInsets(top: 0, leading: 15, bottom: 5, trailing: 0))
                                 .font(.subheadline)
                                 .foregroundColor(Color.gray)
+                            
                             
                                 
                     }
