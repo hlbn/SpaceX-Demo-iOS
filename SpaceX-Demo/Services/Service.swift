@@ -9,6 +9,7 @@ import Combine
 import SwiftUI
 
 class LaunchesApi: ObservableObject {
+    
     @Published var launchesData: [Launches] = []
     @Published var patchData: [Patch] = []
     
@@ -42,3 +43,5 @@ class LaunchesApi: ObservableObject {
         taskLaunches.resume()
     }
 }
+
+

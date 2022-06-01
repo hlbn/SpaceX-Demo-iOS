@@ -15,7 +15,7 @@ struct LaunchesDetailView: View {
         return formatter
     }
     var body: some View {
-        ZStack {
+        ScrollView {
             VStack(alignment: .center,spacing: 20) {
                 Text(launches.name)
                     .font(.system(size: 30))
@@ -45,7 +45,7 @@ struct LaunchesDetailView: View {
                     .bold()
                 Text(launches.details ?? "There are no details.")
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 5, trailing: 10))
-        
+                Link("More", destination: URL(string: launches.links.article!)!)
                 Spacer()
             }
         }

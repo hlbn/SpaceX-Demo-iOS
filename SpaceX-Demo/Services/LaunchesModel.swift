@@ -32,9 +32,11 @@ struct Launches: Hashable, Codable, Identifiable {
 
 struct Links:Hashable, Codable {
     let patch: Patch
+    let article: String?
     
     enum CodingKeys: String, CodingKey {
         case patch
+        case article
     }
 }
 
@@ -42,5 +44,4 @@ struct Links:Hashable, Codable {
 struct Patch:Hashable, Codable {
     let small, large: String?
 }
-
 
