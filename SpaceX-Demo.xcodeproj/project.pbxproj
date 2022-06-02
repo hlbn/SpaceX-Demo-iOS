@@ -93,6 +93,7 @@
 		E4D476E02840D17F00F2229D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E4ED2D0B2848B26E0092D9B3 /* Components */,
 				E4D476E22840D23E00F2229D /* LaunchesDetail */,
 				E4D476E12840D1A700F2229D /* Launches */,
 			);
@@ -136,7 +137,6 @@
 		E4D476E52840D2DD00F2229D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E4D4770B2841934D00F2229D /* ImageViewModel.swift */,
 				E4C1D67F2843A909008C7765 /* LaunchViewModel.swift */,
 			);
 			path = Components;
@@ -145,6 +145,14 @@
 		E4D476E62840D2E700F2229D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E4ED2D0B2848B26E0092D9B3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E4D4770B2841934D00F2229D /* ImageViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
