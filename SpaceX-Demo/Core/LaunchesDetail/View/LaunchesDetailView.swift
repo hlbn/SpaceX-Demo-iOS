@@ -54,6 +54,6 @@ struct LaunchesDetailView: View {
 
 struct LaunchDetailViewModel_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView()
+        LaunchView(filter: .search)
     }
 }
