@@ -11,7 +11,7 @@ import SwiftUI
 struct SpaceX_DemoApp: App {
     var body: some Scene {
         WindowGroup {
-            LaunchView(filter: .search)
+            LaunchView(filter: .all)
         }
     }
 }

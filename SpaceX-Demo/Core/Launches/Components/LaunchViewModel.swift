@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LaunchViewModel: View {
     var launches: Launches
-    
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy, \nHH:mm"
@@ -38,7 +37,7 @@ struct LaunchViewModel: View {
                                 .frame(width: 18, height: 18, alignment: .center)
                                 .foregroundColor(launches.success == true ? Color.green : Color.red)
                             
-                        }
+                            }
                             .padding(EdgeInsets(top: 0, leading: 15, bottom: 5, trailing: 0))
                             
                             //Text(launches.launchpad)
@@ -54,11 +53,11 @@ struct LaunchViewModel: View {
                     }
                 }
             }
-                }
+        }
             
 
 struct LaunchViewModel_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView(filter: .search)
+        LaunchView(filter: .all)
     }
 }

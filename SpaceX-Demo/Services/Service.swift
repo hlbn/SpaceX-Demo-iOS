@@ -11,7 +11,6 @@ import SwiftUI
 class LaunchesApi: ObservableObject {
     
     @Published var launchesData: [Launches] = []
-    @Published var patchData: [Patch] = []
     
     init(){
         fetch()

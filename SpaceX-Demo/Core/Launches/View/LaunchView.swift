@@ -9,51 +9,61 @@ import SwiftUI
 
 struct LaunchView: View {
     enum FilterType {
-        case search, succeded, failed
+        case all, succeded, failed, newest, oldest
     }
     @StateObject var launchesApi = LaunchesApi()
     @State var searchText = ""
-    @State var isPresented = false
+    @State var launchSort = false
     @State var filter: FilterType
     var body: some View {
         NavigationView{
-            List{
-                ForEach(filteredLaunches, id: \.self) { launches in
+            List(filteredLaunches.filter({searchText.isEmpty ? true : "\($0)".contains(searchText)}), id: \.self){ launches in
                     NavigationLink(
                         destination: LaunchesDetailView(launches: launches)) {
                          LaunchViewModel(launches: launches)
-                  
-                  }
-               }
+                }
             }
-            .navigationTitle("Launches")
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText, prompt: "Search")
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading){
-                    Button("Filter"){
-                        isPresented = true
+                ToolbarItem(placement: .principal){
+                    Text("SpaceX")
+                        .font(.title)
+                    }
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button("Sort"){
+                        launchSort = true
                         }
                     }
                 }
             }
-            .confirmationDialog("", isPresented: $isPresented){
+            .confirmationDialog("", isPresented: $launchSort){
+                Button("Newest"){filter = .newest}
+                Button("Oldest"){filter = .oldest}
                 Button("Succeded"){filter = .succeded}
                 Button("Failed"){filter = .failed}
-                Button("All"){filter = .search}
+                Button("All"){filter = .all}
             } message: {
-                Text("Show")
+                Text("Sort by")
             }
         }
+    
     var filteredLaunches: [Launches] {
         switch filter {
-        case .search:
-            return launchesApi.launchesData.filter({
-                searchText.isEmpty ? true : "\($0)".contains(searchText)})
+        case .all:
+            return launchesApi.launchesData
         case .succeded:
-            return launchesApi.launchesData.filter {$0.success}
+            return launchesApi.launchesData.filter{
+                $0.success}
         case .failed:
-            return launchesApi.launchesData.filter {!$0.success}
+            return launchesApi.launchesData.filter{
+                !$0.success}
+        case .oldest:
+            return launchesApi.launchesData.sorted{
+                $0.date < $1.date}
+        case .newest:
+            return launchesApi.launchesData.sorted{
+                $0.date > $1.date}
         }
     }
 }
@@ -62,6 +72,6 @@ struct LaunchView: View {
 
 struct LaunchView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView(filter: .search)
+        LaunchView(filter: .all)
     }
 }
