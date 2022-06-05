@@ -23,21 +23,24 @@ struct LaunchView: View {
                          LaunchViewModel(launches: launches)
                 }
             }
+            .alert(item: $launchesApi.appError) { appError in
+                Alert(title: Text("We've got a problem"), message: Text(appError.error.localizedDescription))
+            }
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText, prompt: "Search")
             .toolbar {
-                ToolbarItem(placement: .principal){
+                ToolbarItem(placement: .principal) {
                     Text("SpaceX")
                         .font(.title)
                     }
-                ToolbarItem(placement: .navigationBarTrailing){
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Sort"){
                         launchSort = true
                         }
                     }
                 }
             }
-            .confirmationDialog("", isPresented: $launchSort){
+            .confirmationDialog("", isPresented: $launchSort) {
                 Button("Newest"){filter = .newest}
                 Button("Oldest"){filter = .oldest}
                 Button("Succeded"){filter = .succeded}

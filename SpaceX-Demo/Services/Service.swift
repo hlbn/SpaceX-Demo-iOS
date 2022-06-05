@@ -11,6 +11,7 @@ import SwiftUI
 class LaunchesApi: ObservableObject {
     
     @Published var launchesData: [Launches] = []
+    @Published var appError: ErrorType? = nil
     
     init(){
         fetch()
@@ -28,6 +29,7 @@ class LaunchesApi: ObservableObject {
         let taskLaunches = URLSession.shared.dataTask(with: url) { [weak self]
             data, response, error in
             guard let data = data, error == nil else {
+                self?.appError = ErrorType(error: .loadError)
                 return
             }
             do{
@@ -36,6 +38,7 @@ class LaunchesApi: ObservableObject {
                     self?.launchesData = launchesData
                 }
             } catch {
+                self?.appError = ErrorType(error: .loadError)
                 print(error)
             }
         }
